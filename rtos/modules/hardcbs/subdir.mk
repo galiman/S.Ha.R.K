@@ -1,0 +1,1 @@
+OBJS += hardcbs/hardcbs.o

@@ -1,0 +1,1 @@
+OBJS += rm/rm.o

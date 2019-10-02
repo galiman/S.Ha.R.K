@@ -1,0 +1,1 @@
+OBJS += ps/ps.o

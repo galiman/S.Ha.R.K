@@ -1,0 +1,16 @@
+Project:	S.Ha.R.K.
+	
+		Mesa-5.0 Porting
+
+Coordinators:
+
+	Giorgio Buttazzo	<giorgio@sssup.it>
+	Paolo Gai		<pj@gandalf.sssup.it>
+
+Authors:
+
+	Giacomo Guidi 	<giacomo@gandalf.sssup.it>
+
+This is the alpha version of the Mesa libraries (Release 5.0) porting 
+under SHARK.
+

@@ -1,0 +1,19 @@
+Utility usage:
+
+1) udpdump: ./udpdump dumptest
+
+	- It receives all the UDP tracer packets, 
+	saving them inside the "dumptest" file
+
+2) pwcet_gen: ./pwcet_gen dumptest > dumptest.pwc
+
+	- It converts the binary file to a text 
+	version with only significative tracer events
+
+3) extract: ./extract dumptest.pwc
+
+	- It shows all the recorded tasks main 
+	statistics, usign also "gnuplot" to display 
+	execution time distributions, inter-arrival times, 
+	and task demand functions.
+

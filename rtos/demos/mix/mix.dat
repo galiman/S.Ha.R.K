@@ -1,0 +1,12 @@
+TASK	NAME	PERIOD		WCET
+------------------------------------------
+task1	watch:	1000000		200
+task2	tasto:	2000		200
+task3	palla:	2000		200
+task4	mosca:	20000		200
+task5	infor:	20000		300
+task6	ruota:	5000		400
+task7	color:	2000		200
+task8	pendo:	5000		400
+------------------------------------------
+

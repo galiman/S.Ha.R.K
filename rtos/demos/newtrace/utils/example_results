@@ -1,0 +1,382 @@
+This is an example file from "extract" utility,
+some comments are added to make it clearer.
+
+Jumpball demo (ecp) statistics
+
+Clk/msec = 2202900 (CPU Athlon 64 3200+)
+
+EVT:Log starts at [147140694139]
+EVT:Log   ends at [196093930505]
+
+Total dTSC [ 48953236366] ns [ 22222113928]
+Events     [      144915]
+Execs      [      131127]
+EndCycles  [       13759]
+
+Preemption Removing.... 
+
+Total nsec of jobs [  3604781671]
+Total nsec of exec [ 22222113928]
+Total nsec considering last clk/msec [ 22222178204]
+
+Compute Task Statistics.... 
+
+Interrupts
+  Total Execution        [    29399348 ns]
+  Mean  CPU Bandwidth    [   0.132298%   ]
+    after first int      [   0.132298%   ]
+  Interrupts Number      [       45842   ]
+  Min  Interrupt         [         189 ns]
+  Mean Interrupt         [         641 ns]
+  Max  Interrupt         [       13056 ns]
+
+  Min  Arr. Delta        [        1881 ns]
+  Mean Arr. Delta        [      484763 ns]
+  Max  Arr. Delta        [    10000131 ns]
+
+- System Interrupts: All the hardware interrupts
+
+Periodical Task CTX [  256] PID [    9]
+  Total Execution        [   276253550 ns]
+  Mean  CPU Bandwidth    [   1.243147%   ]
+    after first exec     [   1.630252%   ]
+  Execs Number           [        9335   ]
+  Min  Exec              [         240 ns]
+  Mean Exec              [       29593 ns]
+  Max  Exec              [       91661 ns]
+
+  Total Job Exec         [   276253550 ns]
+  Jobs Number            [        1695   ]
+  Min  Job               [      162239 ns]
+  Mean Job               [      162981 ns]
+  Max  Job               [      164505 ns]
+
+  Min  Arr. Delta        [     4411818 ns]
+  Mean Arr. Delta        [     9999965 ns]
+  Max  Arr. Delta        [    15588054 ns]
+
+- Task 9 "palla0": Soft Task. The CTX 256 was at the beginning assigned
+to the "main" task. After the task death, the context was free until the
+new "palla0" task was created. "main" task context number is converted to
+1256 to make independent statistics.
+
+Background Task CTX [  264] PID [    1]
+  Total Execution        [ 18583350900 ns]
+  Mean  CPU Bandwidth    [  83.625487%   ]
+    after first exec     [  83.669980%   ]
+  Execs Number           [       16908   ]
+  Min  Exec              [         515 ns]
+  Mean Exec              [     1099086 ns]
+  Max  Exec              [     9836143 ns]
+
+- Task 1 "dummy": The dummy task, it represents the system
+idle time, near 83% as mean value
+
+Background Task CTX [  272] PID [    2]
+  Total Execution        [         926 ns]
+  Mean  CPU Bandwidth    [   0.000004%   ]
+    after first exec     [ 100.000000%   ]
+  Execs Number           [           1   ]
+  Min  Exec              [         926 ns]
+  Mean Exec              [         926 ns]
+  Max  Exec              [         926 ns]
+
+- Task 2 "shutdown task": Shutting down the system. It closes
+the tracer too (this is the reason of only 3 us exec time).
+
+Periodical Task CTX [  280] PID [    3]
+  Total Execution        [     1445626 ns]
+  Mean  CPU Bandwidth    [   0.006505%   ]
+    after first exec     [   0.006512%   ]
+  Execs Number           [         461   ]
+  Min  Exec              [        2583 ns]
+  Mean Exec              [        3135 ns]
+  Max  Exec              [        4206 ns]
+
+  Total Job Exec         [     1445626 ns]
+  Jobs Number            [         461   ]
+  Min  Job               [        2583 ns]
+  Mean Job               [        3135 ns]
+  Max  Job               [        4206 ns]
+
+  Min  Arr. Delta        [     2021387 ns]
+  Mean Arr. Delta        [    48260445 ns]
+  Max  Arr. Delta        [    50010461 ns]
+
+- Task 3 "interrupt server": The interrupt context
+
+Periodical Task CTX [  288] PID [    4]
+  Total Execution        [       59506 ns]
+  Mean  CPU Bandwidth    [   0.000268%   ]
+    after first exec     [   0.000351%   ]
+  Execs Number           [          43   ]
+  Min  Exec              [         566 ns]
+  Mean Exec              [        1383 ns]
+  Max  Exec              [        5850 ns]
+
+  Total Job Exec         [       59506 ns]
+  Jobs Number            [          17   ]
+  Min  Job               [        1217 ns]
+  Mean Job               [        3500 ns]
+  Max  Job               [        9358 ns]
+
+  Min  Arr. Delta        [    65650086 ns]
+  Mean Arr. Delta        [  1059090305 ns]
+  Max  Arr. Delta        [  7168628909 ns]
+
+- Task 4 "key task": The task for keyboard handler
+
+Periodical Task CTX [  296] PID [    5]
+  Total Execution        [  1201275196 ns]
+  Mean  CPU Bandwidth    [   5.405765%   ]
+    after first exec     [   5.406917%   ]
+  Execs Number           [         825   ]
+  Min  Exec              [       11133 ns]
+  Mean Exec              [     1456091 ns]
+  Max  Exec              [     4500554 ns]
+
+  Total Job Exec         [  1201275196 ns]
+  Jobs Number            [         223   ]
+  Min  Job               [     5296076 ns]
+  Mean Job               [     5386884 ns]
+  Max  Job               [     5515636 ns]
+
+  Min  Arr. Delta        [    99757430 ns]
+  Mean Arr. Delta        [   100006689 ns]
+  Max  Arr. Delta        [   101061945 ns]
+
+- Task 5 "jetctrl" : Soft task
+
+Periodical Task CTX [  304] PID [    6]
+  Total Execution        [     4254996 ns]
+  Mean  CPU Bandwidth    [   0.019148%   ]
+    after first exec     [   0.019156%   ]
+  Execs Number           [         446   ]
+  Min  Exec              [        1111 ns]
+  Mean Exec              [        9540 ns]
+  Max  Exec              [       18912 ns]
+
+  Total Job Exec         [     4254996 ns]
+  Jobs Number            [         223   ]
+  Min  Job               [       18971 ns]
+  Mean Job               [       19080 ns]
+  Max  Job               [       21052 ns]
+
+  Min  Arr. Delta        [    95501610 ns]
+  Mean Arr. Delta        [    99979413 ns]
+  Max  Arr. Delta        [   102456106 ns]
+
+- Task 6 "jetdummy" : Soft Task
+
+Periodical Task CTX [  312] PID [    7]
+  Total Execution        [   341582118 ns]
+  Mean  CPU Bandwidth    [   1.537127%   ]
+    after first exec     [   1.537767%   ]
+  Execs Number           [         936   ]
+  Min  Exec              [         520 ns]
+  Mean Exec              [      364938 ns]
+  Max  Exec              [     1300811 ns]
+
+  Total Job Exec         [   341582118 ns]
+  Jobs Number            [         223   ]
+  Min  Job               [     1530776 ns]
+  Mean Job               [     1531758 ns]
+  Max  Job               [     1533632 ns]
+
+  Min  Arr. Delta        [    95494710 ns]
+  Mean Arr. Delta        [    99979490 ns]
+  Max  Arr. Delta        [   102948741 ns]
+
+- Task 7 "jetslice": Soft Task
+
+Periodical Task CTX [  320] PID [    8]
+  Total Execution        [   361875645 ns]
+  Mean  CPU Bandwidth    [   1.628448%   ]
+    after first exec     [   1.628782%   ]
+  Execs Number           [        6750   ]
+  Min  Exec              [        2540 ns]
+  Mean Exec              [       53611 ns]
+  Max  Exec              [       92451 ns]
+
+  Total Job Exec         [   361875645 ns]
+  Jobs Number            [        2222   ]
+  Min  Job               [      162349 ns]
+  Mean Job               [      162860 ns]
+  Max  Job               [      166904 ns]
+
+  Min  Arr. Delta        [     9989352 ns]
+  Mean Arr. Delta        [     9999971 ns]
+  Max  Arr. Delta        [    10010719 ns]
+
+- Task 8 "pallaEDF": Hard Task
+
+Background Task CTX [ 1256] PID [    0]
+  Total Execution        [     4573409 ns]
+  Mean  CPU Bandwidth    [   0.020580%   ]
+    after first exec     [   0.020580%   ]
+  Execs Number           [           6   ]
+  Min  Exec              [        7166 ns]
+  Mean Exec              [      762234 ns]
+  Max  Exec              [     2000656 ns]
+
+- Task 0 "main": Main task was killed, so the original context
+number 256 became 1256
+
+Periodical Task CTX [  328] PID [   10]
+  Total Execution        [   270267226 ns]
+  Mean  CPU Bandwidth    [   1.216208%   ]
+    after first exec     [   1.629184%   ]
+  Execs Number           [        8846   ]
+  Min  Exec              [         241 ns]
+  Mean Exec              [       30552 ns]
+  Max  Exec              [       91592 ns]
+
+  Total Job Exec         [   270267226 ns]
+  Jobs Number            [        1659   ]
+  Min  Job               [      162232 ns]
+  Mean Job               [      162909 ns]
+  Max  Job               [      164270 ns]
+
+  Min  Arr. Delta        [     9988124 ns]
+  Mean Arr. Delta        [     9999982 ns]
+  Max  Arr. Delta        [    10032718 ns]
+
+- Task 10 "palla1": Soft Task
+
+Periodical Task CTX [  336] PID [   11]
+  Total Execution        [   264105857 ns]
+  Mean  CPU Bandwidth    [   1.188482%   ]
+    after first exec     [   1.630505%   ]
+  Execs Number           [        8949   ]
+  Min  Exec              [         239 ns]
+  Mean Exec              [       29512 ns]
+  Max  Exec              [       91573 ns]
+
+  Total Job Exec         [   264105857 ns]
+  Jobs Number            [        1620   ]
+  Min  Job               [      162271 ns]
+  Mean Job               [      163028 ns]
+  Max  Job               [      164299 ns]
+
+  Min  Arr. Delta        [     9989381 ns]
+  Mean Arr. Delta        [     9999964 ns]
+  Max  Arr. Delta        [    10010620 ns]
+
+- Task 11 "palla2": Soft Task
+
+Periodical Task CTX [  344] PID [   12]
+  Total Execution        [   257971822 ns]
+  Mean  CPU Bandwidth    [   1.160879%   ]
+    after first exec     [   1.634880%   ]
+  Execs Number           [       10631   ]
+  Min  Exec              [         238 ns]
+  Mean Exec              [       24265 ns]
+  Max  Exec              [       63831 ns]
+
+  Total Job Exec         [   257971822 ns]
+  Jobs Number            [        1578   ]
+  Min  Job               [      162684 ns]
+  Mean Job               [      163480 ns]
+  Max  Job               [      164782 ns]
+
+  Min  Arr. Delta        [     9989399 ns]
+  Mean Arr. Delta        [     9999963 ns]
+  Max  Arr. Delta        [    10010599 ns]
+
+- Task 12 "palla3": Soft Task
+
+Periodical Task CTX [  352] PID [   13]
+  Total Execution        [   250406676 ns]
+  Mean  CPU Bandwidth    [   1.126836%   ]
+    after first exec     [   1.630586%   ]
+  Execs Number           [        8461   ]
+  Min  Exec              [         240 ns]
+  Mean Exec              [       29595 ns]
+  Max  Exec              [       91753 ns]
+
+  Total Job Exec         [   250406676 ns]
+  Jobs Number            [        1536   ]
+  Min  Job               [      162225 ns]
+  Mean Job               [      163025 ns]
+  Max  Job               [      164557 ns]
+
+  Min  Arr. Delta        [     3184436 ns]
+  Mean Arr. Delta        [     9999970 ns]
+  Max  Arr. Delta        [    16815492 ns]
+
+- Task 13 "palla4": Soft Task
+
+Periodical Task CTX [  360] PID [   14]
+  Total Execution        [   132048658 ns]
+  Mean  CPU Bandwidth    [   0.594222%   ]
+    after first exec     [   1.631180%   ]
+  Execs Number           [        4462   ]
+  Min  Exec              [         244 ns]
+  Mean Exec              [       29594 ns]
+  Max  Exec              [       91702 ns]
+
+  Total Job Exec         [   132048658 ns]
+  Jobs Number            [         810   ]
+  Min  Job               [      162240 ns]
+  Mean Job               [      163023 ns]
+  Max  Job               [      164337 ns]
+
+  Min  Arr. Delta        [     4934088 ns]
+  Mean Arr. Delta        [     9999968 ns]
+  Max  Arr. Delta        [    15066505 ns]
+
+- Task 14 "palla5": Soft Task
+
+Periodical Task CTX [  368] PID [   15]
+  Total Execution        [   125033245 ns]
+  Mean  CPU Bandwidth    [   0.562652%   ]
+    after first exec     [   1.632032%   ]
+  Execs Number           [        4239   ]
+  Min  Exec              [         242 ns]
+  Mean Exec              [       29495 ns]
+  Max  Exec              [       91828 ns]
+
+  Total Job Exec         [   125033245 ns]
+  Jobs Number            [         767   ]
+  Min  Job               [      162266 ns]
+  Mean Job               [      163015 ns]
+  Max  Job               [      164284 ns]
+
+  Min  Arr. Delta        [     9187114 ns]
+  Mean Arr. Delta        [     9999969 ns]
+  Max  Arr. Delta        [    10802835 ns]
+
+- Task 15 "palla6": Soft Task
+
+Periodical Task CTX [  376] PID [   16]
+  Total Execution        [   118201550 ns]
+  Mean  CPU Bandwidth    [   0.531910%   ]
+    after first exec     [   1.631159%   ]
+  Execs Number           [        3985   ]
+  Min  Exec              [         244 ns]
+  Mean Exec              [       29661 ns]
+  Max  Exec              [       91622 ns]
+
+  Total Job Exec         [   118201550 ns]
+  Jobs Number            [         725   ]
+  Min  Job               [      162270 ns]
+  Mean Job               [      163036 ns]
+  Max  Job               [      164089 ns]
+
+  Min  Arr. Delta        [     7797571 ns]
+  Mean Arr. Delta        [     9999955 ns]
+  Max  Arr. Delta        [    12192001 ns]
+
+- Task 16 "palla7": Soft Task
+
+Background Task CTX [  248] PID [NODEF]
+  Total Execution        [        7674 ns]
+  Mean  CPU Bandwidth    [   0.000035%   ]
+    after first exec     [  72.711768%   ]
+  Execs Number           [           1   ]
+  Min  Exec              [        7674 ns]
+  Mean Exec              [        7674 ns]
+  Max  Exec              [        7674 ns]
+
+- Global context: the kernel context
+

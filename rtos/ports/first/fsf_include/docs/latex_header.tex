@@ -1,0 +1,135 @@
+\documentclass[english,titlepage,11pt]{article}
+
+\def\thedeliverable{D-OS.2v2}  % Put the deliverable number here
+\def\theresponsible{SSSA}       % Put the responsible for the deliverable
+
+\newif\ifpdf\ifx\pdfoutput\undefined\pdffalse\else\pdfoutput=1\pdftrue\fi
+\newcommand{\pdfgraphics}{\ifpdf\DeclareGraphicsExtensions{.pdf,.jpg}\else\fi}
+
+\usepackage{times}
+\usepackage{babel}
+\usepackage{latexsym}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{makeidx}
+\usepackage{multicol}
+\ifx\pdfoutput\undefined
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue
+           ]{hyperref}
+\usepackage{pspicture}
+\else
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue
+           ]{hyperref}
+\fi
+\usepackage{doxygen}
+
+\pagestyle{fancy}
+
+\newcommand{\del}{Deliverable \thedeliverable}
+
+\lhead{\setlength{\unitlength}{1mm}
+  \begin{picture}(0,0)
+    \put(0,0){\includegraphics[width=3cm]{FIRST-logo_small2}}
+  \end{picture}}
+\chead{\bfseries IST-2001 34140}
+\rhead{\bfseries \del}
+
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\newcommand{\mytitle}[1]{\title{\includegraphics[width=10cm]{FirstLogo} \\\vspace{.5cm}\large IST-2001 34140 \\\vspace{2cm} \huge #1 \\\vspace{.5cm} \large \del\\\vspace{.5cm} Responsible: \theresponsible}}
+
+\newcount\contribon
+\newcommand{\contrib}[2]{\ifnum\contribon>0\ \\\noindent\fbox{\begin{minipage}{12cm}#1\\ {#2} \end{minipage}}\\\\ \else #2 \fi}
+
+\newenvironment{contribenv}[1]
+{\ifnum\contribon>0 \marginpar{{\bf by #1}} {\em \noindent BEGIN CONTRIBUTION by #1}
+
+\vspace{.2cm} \fi}
+{
+
+\ifnum\contribon>0 \vspace{.2cm}
+{\em \noindent END CONTRIBUTION} \fi}
+
+
+\newenvironment{revhistory}
+{\noindent \bf Revision History\\ \begin{tabular}{|l|l|p{100mm}|}\hline}
+{\hline\end{tabular} \pagebreak}
+
+\newcommand{\responsible}[2]{\marginpar{\bf Responsible: #1\\ 
+Deadline #2}}
+
+\newcommand{\comment}[1]{}
+
+\newenvironment{afrequirements}{
+\def\labelenumi{\bf \arabic{enumi}}
+\def\labelenumii{\bf \arabic{enumi}.\arabic{enumii}}
+\def\labelenumiii{\bf \arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\def\labelenumiv{\bf \arabic{enumi}.\arabic{enumii}.\arabic{enumiii}.\arabic{enumiv}}
+\def\theenumii{.\arabic{enumii}}
+\def\theenumiii{.\arabic{enumiii}}
+\def\theenumiv{.\arabic{enumiv}}
+\makeatletter
+\def\p@enumiii{\arabic{enumi}.\arabic{enumii}}
+\def\p@enumiv{\arabic{enumi}.\arabic{enumii}.\arabic{enumiii}}
+\makeatother
+}{}
+
+\newcommand{\kw}[1]{{\em \textbf{#1}}}
+\newcommand{\kwc}[1]{{\textbf{#1}}}
+
+\newenvironment{codeenv}{\fontfamily{pcr}\fontsize{9}{10}\selectfont\begin{tabbing}abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=abcd\=x\kill\\}
+{\end{tabbing}}
+
+\newenvironment{codedescr}{\begin{description}\item[Description] }{\end{description}}
+
+\newcommand{\myline}{\noindent\rule{\textwidth}{1pt}}
+
+\newenvironment{prototype}
+{\myline
+\begin{codeenv}
+}
+{\end{codeenv}}
+
+\newcommand{\Shark}{{\sf S.Ha.R.K.}}
+
+%
+% Title of the document (according to ANNEX  1 !!!)
+% 
+\mytitle{Deliverable Title -- FSF API reference manual}
+
+%
+% Put the authors here
+% Please add other people if you like
+%
+\author{}
+
+\makeindex
+
+\begin{document}
+
+\maketitle
+
+%
+% This is for highlithing the contributions.
+% Put it to 0 if you do not want to highlight them
+%
+\contribon=0
+
+\tableofcontents
+
+\clearpage
+

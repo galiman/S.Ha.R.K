@@ -1,0 +1,32 @@
+Library Symbols and Descriptions
+
+Old Drivers:
+
+__GRX__		The graphic driver for S3,TRIDENT,VESA cards
+__OLDCHAR__	The old keyboard driver (the new one is under construction)
+__6025E__	The 6025E card driver
+__PPORT__	The Parallel Port driver
+__PCLAB__	The PCL812 card driver
+__NET__		The patched network driver
+__PCL833__	The PCL833 card driver
+
+New Drivers
+
+__LINUXC26__	The Linux 2.6 Emulation Layer
+__PCI__		The Linux 2.6 PCI support
+__INPUT__	The Linux 2.6 Input Layer (KEYBOARD,MOUSE,SPEAKER,JOYSTICK)
+__FB__		The Linux 2.6 Frame Buffer Driver
+__I2C__		The Linux 2.6 I2C Driver
+__BTTV__	The Linux 2.6 Frame Grabber BTTV Driver
+
+Ports:
+
+__FFT__		FFT support (from FFTW)
+__OSMESA__	Off-Screen Mesa support (from Mesa 5.0)
+__PNG__		PNG Image file format support (from PNGlib)
+__ZLIB__	Zlib support (from zlib)
+__FIRST__       FSF Framework
+__TFTP__        TFTP Protocol
+__SERVO__       Servo Control Lib
+__SNAPSHOT__	Snapshot Library
+

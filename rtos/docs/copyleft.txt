@@ -1,0 +1,143 @@
+What Is Copyleft?
+
+---------------------------------------------------------------------------
+
+Table of Contents
+
+   * What Is Copyleft?
+   * Translations of the GPL
+   * Other Texts to Read
+
+---------------------------------------------------------------------------
+
+What Is Copyleft?
+
+The simplest way to make a program free is to put it in the public domain
+(18k characters), uncopyrighted. This allows people to share the program
+and their improvements, if they are so minded. But it also allows
+uncooperative people to convert the program into proprietary software (18k
+characters). They can make changes, many or few, and distribute the result
+as a proprietary product. People who receive the program in that modified
+form do not have the freedom that the original author gave them; the
+middleman has stripped it away.
+
+In the GNU project, our aim is to give all users the freedom to
+redistribute and change GNU software. If middlemen could strip off the
+freedom, we might have many users, but those users would not have freedom.
+So instead of putting GNU software in the public domain, we ``copyleft''
+it. Copyleft says that anyone who redistributes the software, with or
+without changes, must pass along the freedom to further copy and change it.
+Copyleft guarantees that every user has freedom.
+
+Copyleft provides another benefit as well. People who write improvements in
+free software often work for companies or universities that would do almost
+anything to get money. A programmer may want to contribute her changes to
+the community, but her employer may ``see green'' and insist on turning the
+changes into a commercial product.
+
+When we explain to the employer that it is illegal to distribute the
+improved version except as free software, the employer usually decides to
+release it as free software rather than throw it away.
+
+To copyleft a program, first we copyright it; then we add distribution
+terms, which are a legal instrument that gives everyone the rights to use,
+modify, and redistribute the program's code or any program derived from it
+but only if the distribution terms are unchanged. Thus, the code and the
+freedoms become legally inseparable.
+
+Proprietary software developers use copyright to take away the users'
+freedom; we use copyright to guarantee their freedom. That's why we reverse
+the name, changing ``copyright'' into ``copyleft.''
+
+Copyleft is a general concept; there are many ways to fill in the details.
+In the GNU Project, the specific distribution terms that we use are
+contained in the GNU General Public License (20k characters) (GNU GPL). An
+alternate form, the GNU Library General Public License (27k characters)
+(GNU LGPL), applies to a few (but not all) GNU libraries. The library
+license permits linking the libraries into proprietary executables under
+certain conditions.
+
+The appropriate license is included in many manuals and in each GNU source
+code distribution (usually in files named COPYING (20k characters) and
+COPYING.LIB (27k characters)).
+
+The GNU GPL is designed so that you can easily apply it to your own program
+if you are the copyright holder. You don't have to modify the GNU GPL to do
+this, just add notices to your program which refer properly to the GNU GPL.
+
+If you would like to copyleft your program with the GNU GPL, please see the
+instructions at the end (20k characters) of the GPL text. If you would like
+to copyleft your library with the GNU LGPL, please see the instructions at
+the end (27k characters) of the LGPL text (note you can also use the
+ordinary GPL for libraries).
+
+Using the same distribution terms for many different programs makes it easy
+to copy code between various different programs. Since they all have the
+same distribution terms, there is no need to think about whether the terms
+are compatible. The Library GPL includes a provision that lets you alter
+the distribution terms to the ordinary GPL, so that you can copy code into
+another program covered by the GPL.
+---------------------------------------------------------------------------
+
+Translations of the GPL
+
+Here are some translations of the GNU GPL done by others.
+
+   * A Japanese translation of the GPL.
+   * A German translation of the GPL.
+
+These versions are not official. Legally speaking, the original (English)
+version of the GPL is what specifies the actual distribution terms for GNU
+programs.
+
+The reason the FSF does not approve these translations as officially valid
+is that checking them would be difficult and expensive (needing the help of
+bilingual lawyers in other countries). Even worse, if an error did slip
+through, the results could be disastrous for the whole free software
+community. As long as the translations are unofficial, they can't do any
+harm, and we hope they help more people understand the GPL.
+---------------------------------------------------------------------------
+
+Other Texts to Read
+
+This first group of articles directly address the philosophy of the GNU
+project and free software:
+
+   * What is Free Software?
+   * Why Software Should Not Have Owners
+   * Selling Free Software Can Be Ok!
+   * Categories of Free Software (18k characters)
+   * Free software is more reliable!
+   * What is the Free Software Foundation?
+   * What is Copyleft?
+   * Confusing Words which You Might Want to Avoid
+   * History of the GNU Project
+   * The GNU Manifesto (31k characters)
+   * Why there are no GIF files on GNU web pages
+
+This second group of articles deal with related topics but are not directly
+about the GNU project:
+
+   * How to Protect the Right to Write Software (independent of whether
+     it's free or not)
+   * Where the Copyright System and Government Plans are Leading Us
+   * The Right Way to Tax DAT (22k characters)
+   * Studies Find Reward Often No Motivator
+   * A speech that Richard Stallman gave in 1986 at the Royal Institute of
+     Technology in Sweden
+   * How to Protect the Freedoms of Speech, Press, and Association on the
+     Internet
+
+---------------------------------------------------------------------------
+
+FSF & GNU inquiries & questions to gnu@prep.ai.mit.edu. Other ways to
+contact the FSF.
+
+Copyright (C) 1996, 1997 Free Software Foundation, Inc., 59 Temple Place -
+Suite 330, Boston, MA 02111, USA
+
+Verbatim copying and distribution is permitted in any medium, provided this
+notice is preserved.
+
+Updated: 4 Aug 1997 tower
+---------------------------------------------------------------------------

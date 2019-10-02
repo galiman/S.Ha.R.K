@@ -1,0 +1,71 @@
+/*
+ * Project: S.Ha.R.K.
+ *
+ * Coordinators: 
+ *   Giorgio Buttazzo    <giorgio@sssup.it>
+ *   Paolo Gai           <pj@gandalf.sssup.it>
+ *
+ * Authors     : 
+ *   Paolo Gai           <pj@gandalf.sssup.it>
+ *   Massimiliano Giorgi <massy@gandalf.sssup.it>
+ *   Luca Abeni          <luca@gandalf.sssup.it>
+ *   (see the web pages for full authors list)
+ *
+ * ReTiS Lab (Scuola Superiore S.Anna - Pisa - Italy)
+ *
+ * http://www.sssup.it
+ * http://retis.sssup.it
+ * http://shark.sssup.it
+ */
+
+/* CVS :        $Id: fab_grx.sys,v 1.1 2002/10/01 10:25:02 pj Exp $ */
+
+/*
+ * Copyright (C) 2000 Fabio Calabrese <fabiocalabrese77@yahoo.it>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ */
+
+// file incluso da FAB_grx.h
+// -------------------------
+
+typedef BYTE  COLOR8;
+typedef WORD  COLOR15;
+typedef WORD  COLOR16;
+typedef DWORD COLOR24;
+typedef DWORD COLOR32;
+
+#if defined FAB_GRX_15
+                       #define __FAB_BPP 15
+                       #define __FAB_rgb(R24,G24,B24) rgb15((R24),(G24),(B24))
+                       typedef COLOR15 __FAB_COLOR;
+#elif defined FAB_GRX_16
+                       #define __FAB_BPP 16
+                       #define __FAB_rgb(R24,G24,B24) rgb16((R24),(G24),(B24))
+                       typedef COLOR16 __FAB_COLOR;
+#elif defined FAB_GRX_24
+                       #define __FAB_BPP 24
+                       #define __FAB_rgb(R24,G24,B24) rgb24((R24),(G24),(B24))
+                       typedef COLOR24 __FAB_COLOR;
+#elif defined FAB_GRX_32
+                       #define __FAB_BPP 32
+                       #define __FAB_rgb(R24,G24,B24) rgb32((R24),(G24),(B24))
+                       typedef COLOR32 __FAB_COLOR;
+#else
+                       #define __FAB_BPP 16
+                       #define __FAB_rgb(R24,G24,B24) rgb16((R24),(G24),(B24))
+                       typedef COLOR16 __FAB_COLOR;
+#endif

@@ -1,0 +1,49 @@
+Function	Description			Serial Output String		Serial Input String
+_____________________________________________________________________________________________________________________
+
+SetPort		Set port p to value v		0000.Pppp:0000.vvvv:vvvv.vvvv
+
+GetPort		Get port p value 		0001.Pppp			Ret: 0000.vvvv:vvvv.vvvv
+
+StorePort	Store port p value		0010.Pppp
+
+
+GetAnalog	Get analog port a value		0100:naaa			Ret: [0000.00vv:]vvvv.vvvv
+
+
+
+SetServo	Turn Off servo m		1000:0000:0000:Mmmm
+
+SetServo	Turn On servo m			1000:0000:0001:Mmmm
+
+SetServos	Turn Off servos			1000:0000:0010:0000
+
+SetServos	Turn On servos			1000:0000:0010:0001
+
+GetServoMask	Get servo levels		1000:0000:0100:000M		Ret: ssss.ssss
+
+SetServoMask	Set servo levels		1000:0000:0101:000M:ssss:ssss
+
+StoreServos	Store servo levels		1000:0000:1000:0000
+
+
+
+StoreRS232	Store RS232 BaudRate		1000:0100
+
+GetRS232	Get RS232 BaudRate		1000:0101			Ret: 0000.000w:bbbb.bbbb
+
+SetRS232	Set RS232 BaudRate		1000:011w:bbbb.bbbb
+
+
+
+StorePeriod	Store Period/8 value		1000:1000
+
+GetPeriod	Get Period/8 value		1000:1001			Ret: llll.llll
+
+SetPeriod	Set Period/8 value		1000:1010:llll.llll
+
+
+
+GetSwitch	Get Switch values		1000:1100			Ret: 0000:000s
+
+SetSwitch	Set Switch RC5 to status s	1000:111s

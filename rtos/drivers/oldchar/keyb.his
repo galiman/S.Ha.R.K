@@ -1,0 +1,18 @@
+1.2
+ The inp() & outp() have been substituted with VM_in() & VM_out() for
+ portability purposes. 
+
+1.3
+ Added the keyb_reset() to avoid the keyboard stuck on exit (perhaps
+ due to a missed irq), especially on "fast" machines, where we 
+ experienced some problems; however we cannot reproduce them
+ deterministically, even if they disappeared after the keyb_reset()
+ appearence
+
+1.4
+ Different keyboard layout (keyMap) are now supported. We have
+ enlgish & italian keyboard. We added a program which should help
+ to build a new keymap!
+
+CVS 1.3
+ Changed user interface

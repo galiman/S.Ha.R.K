@@ -1,0 +1,1 @@
+OBJS += elastic/elastic.o

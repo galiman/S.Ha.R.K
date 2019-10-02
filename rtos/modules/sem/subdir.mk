@@ -1,0 +1,1 @@
+OBJS += sem/sem.o

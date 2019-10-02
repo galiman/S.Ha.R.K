@@ -1,0 +1,14 @@
+This directory contains a set of sub directories containing all the tracer
+examples and utilities.
+
+Here a short description of the contents
+
+utils  - some small utilities:
+
+		udpdump - save on a file the logged events sent through network
+
+udp    - a small application that sends its trace data through the network
+         the new version also contains the code to configure the output to disk
+
+nosave - a simple tracer implementation without saving logged events
+

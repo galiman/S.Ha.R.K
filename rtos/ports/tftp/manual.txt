@@ -1,0 +1,29 @@
+The Tftp protocol implementation under Shark
+
+Initialization:
+1. call the tftp_init() routine;
+2. call the tftp_net_start(...) to initialize the network card; the third parameter specify if you wantto initialize
+   the IP address of the card (1) or if you simply pass an already initialized one (0).
+3. call tftp_open(...) to get a free socket;
+4. call tftp_upload(...) or tftp_download(...) (the last one is not yet implemented) to start the tftp deamons.
+
+The tftp library allocate a new socket for each upload/download connection.
+The base port is set to 2000 and the i-th connection uses the [base]+i port address.
+
+To stop uploading use tftp_close(connection, hardness)
+hardness could be TFTP_STOP_NOW or TFTP_FLUSH_BUFFER
+with TFTP_STOP_NOW you:
+- sends immediately a packet with 0 bytes of data (means stop transfer!);
+- all data in the buffer are lost;
+- deamon stops immediately.
+
+with TFTP_FLUSH_BUFFER you:
+- couldn't write no more data in the buffer;
+- deamons stay alive to send all data in the buffer to the server;
+- then they shut down the service.
+
+To Do:
+- Implement the download routines
+- Improve the error checking (at now the ACK deamon don't check for the block number)
+- Use the [Big-Little]-endian routines provided with Shark instead of the ad-hoc ones.
+- Improving the QUEUE library (I'm developing it) and use it in the TFTP library (and provide it to all Shark users).

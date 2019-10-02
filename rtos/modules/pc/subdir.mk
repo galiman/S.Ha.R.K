@@ -1,0 +1,1 @@
+OBJS += pc/pc.o

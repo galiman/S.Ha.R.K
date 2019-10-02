@@ -1,0 +1,11 @@
+Authors of FFTW:
+
+Matteo Frigo (athena@theory.lcs.mit.edu)
+Stevenj G. Johnson (stevenj@alum.mit.edu)
+
+Note:
+-----
+This is a PARTIAL porting on the Hartik Real-Time Kernel.
+Check for the latest version of the package on www.fftw.org !!!
+
+Paolo

@@ -1,0 +1,44 @@
+This directory contains a set of simple examples, useful to understand
+How to make a Shark application.
+
+Text mode demos:
+- hello.c   --> a hello world application
+- timer.c   --> tests if the time reads are always increasing 
+	        (useful for debugging purposes)
+- sig.c     --> simple example that sends signals
+- semdemo.c --> simple example that uses a semaphore for mutual exclusion
+- pidemo.c  --> simple example that uses PI  mutexes between NRT and Hard tasks
+- pcdemo.c  --> simple example that uses PC  mutexes between NRT and Hard tasks
+- srpdemo.c --> simple example that uses SRP mutexes between NRT and Hard tasks
+- mdemo.c   --> simple example that uses a mutex, initialized with whatever
+                protocol you want ;-)
+- aster.c   --> Wow! the original Hartik ASTER demo!!! (EDF, CABs, ...)
+- aster1.c  --> a -lot- of periodic tasks that are created and then die 
+	        (6 seconds demo)
+- aster2.c  --> a simple stress test: a lot of tasks are created until Utot=1;
+	        uses jet functions to dump statistics. (60 seconds demo)
+- aster3.c  --> aster2 + 8 tasks handled by 2 different TBS servers
+- aster4.c  --> aster3 + CBS tasks + Shutdown demo with system tasks
+- aster5.c  --> aster3 + only CBS tasks + mutexes... Really interesting!
+- aster6.c  --> aster5 + Polling Server to serve the JetCtrl task
+- aster7.c  --> another aster clone with Rate monotonic and Polling server
+- aster8.c  --> aster5 + Sporadic Server
+- preempt.c --> simple test for CBS, task_preempt, task_nopreempt, and 
+	        save/skip arrivals
+- pcidemo.c --> PCI Bus scan
+- jointest.c--> Simple test that uses the task_join primitive
+- condtest.c--> Simple test that uses condition variables
+- intsem.c  --> Simple test that uses internal semaphores
+
+Graphical demos:
+- fly.c     --> Random flies going around the screen
+- ego.c     --> Periodic tasks that writes a phrease on the screen
+- cabs.c    --> Example that uses cabs
+
+Note on the init files:
+- ihello.c   (RR+dummy)
+- isemdemo.c (iaster1+Semaphores)
+- iaster1.c  (EDF+RR+dummy)
+- iaster3.c  (EDF+RR+TBS(0.1)+TBS(0.3)+dummy)
+- iaster4.c  (iaster3+CBS)
+- initfile.c (EDF+CBS+RR+dummy, SEMaphores, CABS, HARTPORTs and Keyboard)

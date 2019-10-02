@@ -1,0 +1,79 @@
+S.Ha.R.K. RoadMap
+
+Update 17/07/2006
+A general overview of S.Ha.R.K. development.
+
+This map shows where S.Ha.R.K. is currently going. All the ideas and projects related to S.Ha.R.K. development are here reported. These items are not currently supported in the S.Ha.R.K. distribution, you can look at the drivers and modules webpage to know the actual working features.
+
+General project organization
+
+ - New section for unsupported kernel modules
+
+ - Remove the advanced demos section
+
+ - Update to supported demos and kernel modules, and to unsupported demos section
+
+Drivers
+
+* IntDrive interrupt server
+
+ - fix problems on PCs with specific chipset
+
+* New network layer
+
+ - Porting of Etherboot drivers (support for more than 70 NICs)
+
+ - real-time drivers (3Com 3c90xb cards supported)
+
+* USB stack
+
+ - 90% done, including host, hub, and many devices
+
+ - refine support for PWC chipset based webcam
+
+ - add support for serial/USB adapters
+
+* Aquisition
+
+ - port of the saa7134 framegrabber driver from Linux 2.6 kernel (60% done)
+
+ - general purpose aquisition through external custom board
+
+* Power-aware computing
+
+ - support for ACPI
+
+* External custom boards
+
+ - Microchip dsPIC based custom board (80% done)
+
+ - new servomotor drive library
+
+ - wireless communication through custom board
+
+Documentation
+
+ - Quick start guide (95% done)
+
+ - Makefile structure
+
+ - Drivers and ports interface
+
+ - Supported demos
+
+ - Change log
+
+Toward S.Ha.R.K. 2.0
+
+ - Memory protection
+
+ - ARM (XSCALE) support
+
+ - Hyper-threading support
+
+ - Dynamic module allocation and loading
+
+If you want to join one o more developing projects, please write a mail to
+ tullio.facchinetti "at" unipv.it
+
+Any collaboration is welcome!! 

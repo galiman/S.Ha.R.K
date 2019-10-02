@@ -1,0 +1,1 @@
+OBJS += dummy/dummy.o

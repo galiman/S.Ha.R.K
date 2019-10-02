@@ -1,0 +1,8 @@
+
+Directories contain:
+
+backup       -> an old copy of the code
+ideglue      -> try to use IRQ directly without a task activation
+ideglue.back -> backup of ideglue code
+
+all other    -> a specific disk queues "scheduler"

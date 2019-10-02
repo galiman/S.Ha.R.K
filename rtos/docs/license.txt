@@ -1,0 +1,3 @@
+S.Ha.R.K. is released under the GPL license (see gpl.txt for the details).
+All files not expressly including a licensing disclaimer are licensed under the GPL license.
+Some packages are released with different, but GPL compatible, licenses. 

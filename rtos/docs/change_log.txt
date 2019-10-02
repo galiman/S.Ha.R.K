@@ -1,0 +1,219 @@
+S.Ha.R.K. Change Log
+
+*** Version 1.5.4
+08/11/2007
+
+- Added -fno-stack-protector flag for compiling with neewr gcc 4 under Ubuntu
+- Changed the default base memory address.
+- Bug fixing: Deactivate pending activations of interrupts.
+- Fixed linuxc26 timer cancellation.
+- Now Shark demos run correctly under emulators like QEmu and VirtualBox.
+
+*** Version 1.5.3.1
+23/01/2007
+
+- new COMPILER option within shark.cfg
+- updated makefiles to consider the COMPILER option within shark.cfg
+
+*** Version 1.5.3
+17/01/2007
+
+- added missing licensing information
+- removed code that was not GPL compatible, including
+  - $(SHARK)/ports/mpeg
+  - $(SHARK)/ports/png
+  - $(SHARK)/ports/mpg123
+- removed unused $(SHARK)/config/hconf
+- modified CVS to move demos from "demos" CVS module to "unsupported" CVS module, including
+  - demos/first
+  - demos/sharkDecoderWithFSF
+  - demos/loader
+- created new $(SHARK)/docs directory
+- moved documentation files from $(SHARK) to $(SHARK)/docs
+
+*** Version 1.5.2.1
+26/10/2006
+
+- fixed a little bug to the library for serial port which made unusable the port
+- added clearer comments to config.mk files to make easier the fixes for compiling with older gcc versions
+
+*** Version 1.5.2
+20/09/2006
+
+- gcc 4x support
+
+*** Version 1.5.1
+21/07/2006
+
+- added dynalink support (thanks to LexN);
+- first working version of USB driver;
+- added functions needed by the USB driver;
+- IntDrive task is now created by posting a sys_atrunlevel event at RUNLEVEL_INIT instead of creating the task directly into the INTDRIVE_register_level;
+- changed exit key from Alt+C to Ctrl+C to all demos;
+- aster3.c demo: changed error message from test7.c to aster3.c;
+- BCA demo: .c inclusions removed and code splitted into .o object files;
+- resolved bug to printf function;
+- added features to the serial send;
+- serial port driver keeps track of initialized ports;
+- fixed error for tracer compilation;
+- tracer: removed the dependency from network for all the applications which do not use the tracer: now the tracer works with pointer to functions instead of direct calls;
+- tracer: added the support for output to disk;
+- tracer: event filtering added;
+- new INTERRUPT_task model;
+- demos initfiles IntDrive initialization updated to the new IntDrive interface;
+- demos initfiles updated to correctly manage the level register module;
+- fixed bug to group_activate_at which tried to activate tasks that failed during creation;
+- filtered out demos which do not compile properly;
+- makefiles dependencies resolved;
+- source cleaning;
+- pci6025e: ADC driver added;
+- new IntDrive implementation;
+- added sem.h (thanks to Ricardo Marau);
+
+*** Version 1.5 beta1
+25/02/2005
+
+- added modules directory in the include path;
+- moved modules;
+- shark_linuxc26.c: changes from "exit" to "return";
+- new helloworld demo;
+- FIRST: change in table driven;
+- FIRST: change in number of supported local scheduler;
+- removed sys_end, sys_abort, using exit instead;
+- removed sys_abort_shutdown at the end of the shutdown task;
+- fixed bug to the panic function;
+- task_endcycle calls task_testcancel;
+- FIRST: new module for offline scheduling;
+- FIRST: change for the new API;
+- add macro to dummy group;
+- new FIRST demo;
+- FIRST: modifications for new api;
+- USB device driver experimental version (thanks to Claudio Melita);
+- FIRST: shared object function adjusted;
+- FIRST: new semaphore module for shared object;
+- CPUID enable function for Cyrix added;
+- added DVS options;
+- cpufreq demo added;
+- CPU26_get_frequencys bugfix;
+- CPU26_get_frequencys added;
+- sleep, usleep functions added;
+- multistate key_hook patched;
+
+*** Version 1.4
+01/06/2004
+
+- snapshop library added;
+
+*** Version 1.4 rc1
+26/05/2004
+
+- PCL833 driver added;
+- new task_activate, edf, rm modules version (thanks to Anton Cervin);
+- APIC restore function patched;
+- support for dynamic clk_per_msec change;
+- new network layer added;
+- safe TSR and APIC timer initialization added;
+- LINUX/DJGPP differences removed;
+
+*** Version 1.4 beta
+24/04/2004
+
+- network demos with new PCI support added;
+- added NewNet and CPUFreq support;
+- added LINUX/DJGPP selection;
+- new sys_abort_shutdown function added;
+- fly2 demo added;
+- input demo added;
+- new input driver added (thanks to Nino);
+- CM7323 framegrabber support added;
+- new I2C from linux 2.6.0;
+- new Linux 2.6.0 driver layer support (thanks to Giacomo);
+- new Tracer introduced;
+
+*** Version 1.2.2
+01/12/2003
+
+- timer optimizations;
+- APIC Support;
+- configuration file added
+- new __TSC__ __APIC__ compiling options;
+
+*** Version 1.2.1
+03/11/2003
+
+- servo control library added;
+- TFTP driver added (thanks to Tool);
+- ABORT 64 removed in oneshot mode and sti/cli removed from irq_bind;
+- FIRST - S.Ha.R.K. Implementation;
+
+*** Version 1.2
+18/06/2003
+
+- BTTV framegrabber demo added;
+- BTTV library included;
+- BTTV frame grabber driver v1.0;
+
+*** Version 1.1
+13/05/2003
+
+- added demo astro (thanks to Nino);
+- added comments and sys_shutdown_message;
+- added shutdown message;
+- printings on abort added;
+- printings on sys_end added;
+- add support for real-time alloc function (OCERA);
+- add support for DIDMA;
+- advanced timer demo (thanks to Giacomo);
+- runlevel modified;
+
+*** Version 1.0
+25/03/2003
+
+- DOS_alloc and DOS_free removed;
+- svga/grx separation;
+- new include structure
+- PNG library added;
+- Zlib library added;
+
+*** Version 0.5
+19/03/2003
+
+- added linux32.mk to compile with gcc 3.2;
+- mesademo demo added;
+- mesatex demo added;
+- updated makefiles (for -I$(OSLIB), and dependencies);
+- resolved dependency problems with .s;
+- new libraries, updated makefiles;
+- added scan for more than 1 PCI bus;
+- updated makefiles to fix the OSLIB variable problem;
+- libc stdlib: added bserach and qsort functions;
+- MESA 5.0 OpenGL library import (thanks to Giacomo);
+- imported new OSLib (Jan 30, 2003)
+- OSLib updates;
+- new scheduling module interface;
+
+*** Version 0.4
+28/11/2002
+
+- removed task_delay
+- integration with IQUEUES
+- other fixes
+- removed old unused targets;
+- new demos imported from oldexamples
+- removed task_delay
+- other fixes
+- added usage for printk into pci driver;
+- basic examples added;
+- added DOSFS tracer type;
+- BCA demo added (thanks to Fabio Calabrese);
+- dosfs demo added;
+- jumpball demos added;
+- mix demos added;
+- National Instruments demos added;
+
+*** Version 0.3
+29/03/2002
+
+- first version;
+- README.TXT file has been added explaining how to create the config.mk file;
+
